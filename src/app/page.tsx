@@ -1,11 +1,9 @@
-import Link from "next/link";
-import { api } from "~/trpc/server";
-import { CreateUser } from "./_components/create-user";
+import Header from "./components/header";
 
 export default function Home() {
   return (
     <main className="">
-      <CreateUser />
+      <Header />
     </main>
   );
 }

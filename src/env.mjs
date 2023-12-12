@@ -23,6 +23,9 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    RESEND_TOKEN: z.string(),
+    SERVER_URL: z.string().url(),
+    JWT_SECRET: z.string(),
   },
 
   /**
@@ -42,6 +45,9 @@ export const env = createEnv({
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_TOKEN: process.env.DATABASE_TOKEN,
     NODE_ENV: process.env.NODE_ENV,
+    RESEND_TOKEN: process.env.RESEND_TOKEN,
+    SERVER_URL: process.env.SERVER_URL,
+    JWT_SECRET: process.env.JWT_SECRET,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
